@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.StandardCopyOption;
 import java.nio.file.attribute.FileTime;
 import java.nio.file.attribute.PosixFilePermission;
 import java.nio.file.attribute.UserPrincipal;
@@ -66,9 +67,45 @@ public class Main {
             Files.writeString(iso88591File, "this is my string ää öö üü", StandardCharsets.ISO_8859_1);
             System.out.println("iso88591File : " + iso88591File);
 
+            // Writing bytes in files
+            Path anotherIso88591File = Files.createTempFile("some", ".txt");
+            Files.write(anotherIso88591File, "this is my string ää öö üü".getBytes(StandardCharsets.ISO_8859_1));
+            System.out.println("anotherIso88591File: "+anotherIso88591File);
+
+            // Reading the files
+            String s = Files.readString(utfFile);
+            System.out.println("String: " + s);
+
+            s = Files.readString(utfFile, StandardCharsets.ISO_8859_1);
+            System.out.println("String: " + s);
+
+            // Reading Bytes
+            s = new String(Files.readAllBytes(utfFile), StandardCharsets.ISO_8859_1);
+            System.out.println("Reading bytes: " + s);
+
         }catch (IOException ex){
             System.out.println(ex.getMessage());
         }
 
+
+        // Moving, Deleting, Listing the Files
+        try {
+            Path newUtfFile = Files.createTempFile("some", ".txt");
+
+            // Files.move(newUtfFile, Path.of("D:/Coding Tutorial/Java API"), null); // This is wrong way!
+            Files.move(newUtfFile, Path.of("D:/Coding Tutorial/Java API").resolve(newUtfFile.getFileName().toString()));
+
+            // Other options to move files
+            Files.move(newUtfFile, Path.of("D:/Coding Tutorial/Java API").resolve(newUtfFile.getFileName().toString()), StandardCopyOption.REPLACE_EXISTING); // This will replace the existing one file.
+
+            // This will move a file into a directory and be guaranteed that any process watching the directory accesses a complete file and not just a partial file.
+            Files.move(newUtfFile, Path.of("D:/Coding Tutorial/Java API").resolve(newUtfFile.getFileName().toString()), StandardCopyOption.ATOMIC_MOVE);
+
+            // Deleting the files            
+
+        } catch (IOException e) {
+            // System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
     }
 }
