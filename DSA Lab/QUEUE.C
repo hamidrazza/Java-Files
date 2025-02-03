@@ -11,7 +11,7 @@ void display();
 
 void main(){
 	int repeat=1, choice;
-	clrscr();
+	clrscr(); // Using this because of the Turbo C.
 	while(repeat){
 		printf("Choose an option\n");
 		printf("1. Insert\n");
@@ -24,7 +24,7 @@ void main(){
 		switch(choice){
 			case 1:
 				enque();
-				clrscr();
+				clrscr(); // clearing every time while calling the function.
 				break;
 			case 2:
 				deque();
