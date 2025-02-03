@@ -55,7 +55,7 @@ void enque(){
 		printf("\nEnter the no: ");
 		scanf("%d", &queue[rear]);
 		if(front == -1){
-			front = 0;
+			front++;
 		}
 		printf("%d is inserted successfully\n",queue[rear]);
 	}
@@ -65,7 +65,17 @@ void deque(){
 		printf("\nQueue is empty\n");
 	}
 	else{
-		printf("\n%d is deleted\n",queue[rear]);
+		printf("\n%d is deleted\n",queue[front]);
+	}
+	if(rear == 0 && front == 0){
+		front--;
+		rear--;
+	}
+	else{
+		int i;
+		for(i=0; i<rear;i++){
+			queue[i] = queue[i+1];
+		}
 		rear--;
 	}
 }
@@ -76,8 +86,8 @@ void display(){
 	else{
 		int i;
 		printf("\nQueue elements are : ");
-		for(i= front; i <= rear; i++){
-			printf("%d ",queue[i]);
+		for(i=0; i <= rear; i++){
+			printf("%d\t",queue[i]);
 		}
 		printf("\n");
 	}
