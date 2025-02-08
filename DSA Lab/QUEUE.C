@@ -9,9 +9,9 @@ void enque();
 void deque();
 void display();
 
-void main(){
-	int repeat=1, choice;
-	clrscr(); // Using this because of the Turbo C.
+int repeat=1, choice;
+int main(){
+	//clrscr(); // Using this because of the Turbo C.
 	while(repeat){
 		printf("Choose an option\n");
 		printf("1. Insert\n");
@@ -24,11 +24,11 @@ void main(){
 		switch(choice){
 			case 1:
 				enque();
-				clrscr(); // clearing every time while calling the function.
+				//clrscr(); // clearing every time while calling the function.
 				break;
 			case 2:
 				deque();
-				clrscr();
+				//clrscr();
 				break;
 			case 3:
 				printf("\nFront element is: %d",queue[front]);
@@ -45,6 +45,7 @@ void main(){
 		printf("\nWant to continue 0/1 ");
 		scanf("%d", &repeat);
 	}
+	return 0;
 }
 void enque(){
 	if(rear == capacity-1){
@@ -68,10 +69,12 @@ void deque(){
 		printf("\n%d is deleted\n",queue[front]);
 	}
 	if(rear == 0 && front == 0){
+		queue[front] = NULL;
 		front--;
 		rear--;
 	}
 	else{
+		queue[front] = NULL;
 		int i;
 		for(i=0; i<rear;i++){
 			queue[i] = queue[i+1];
