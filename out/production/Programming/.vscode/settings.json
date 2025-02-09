@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "*.embeddedhtml": "html",
+        "*.html": "html",
+        "QUEUE.C": "cpp",
+        "STACKINC.C": "cpp"
+    }
+}

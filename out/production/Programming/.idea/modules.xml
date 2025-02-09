@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java/Binary Tree/Binary Tree.iml" filepath="$PROJECT_DIR$/Java/Binary Tree/Binary Tree.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/BinarySearch/BinarySearch.iml" filepath="$PROJECT_DIR$/Java/BinarySearch/BinarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Bitwise Operator/Bitwise Operator.iml" filepath="$PROJECT_DIR$/Java/Bitwise Operator/Bitwise Operator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Collections Framework/Collections Framework.iml" filepath="$PROJECT_DIR$/Java/Collections Framework/Collections Framework.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Demo JDBC/Demo JDBC.iml" filepath="$PROJECT_DIR$/Demo JDBC/Demo JDBC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Exercises/Exercises.iml" filepath="$PROJECT_DIR$/Java/Exercises/Exercises.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Fibonacci Series/Fibonacci Series.iml" filepath="$PROJECT_DIR$/Java/Fibonacci Series/Fibonacci Series.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/First Project/First Project.iml" filepath="$PROJECT_DIR$/Java/First Project/First Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Heap/Heap.iml" filepath="$PROJECT_DIR$/Java/Heap/Heap.iml" />
+      <module fileurl="file://$PROJECT_DIR$/JavaAPI/JavaAPI.iml" filepath="$PROJECT_DIR$/JavaAPI/JavaAPI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Oops/Oops.iml" filepath="$PROJECT_DIR$/Java/Oops/Oops.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Packages/Packages.iml" filepath="$PROJECT_DIR$/Java/Packages/Packages.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Programming.iml" filepath="$PROJECT_DIR$/Programming.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Recursion/Recursion.iml" filepath="$PROJECT_DIR$/Java/Recursion/Recursion.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Recursion Array Ques/Recursion Array Ques.iml" filepath="$PROJECT_DIR$/Java/Recursion Array Ques/Recursion Array Ques.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Searching Algo/Searching Algo.iml" filepath="$PROJECT_DIR$/Java/Searching Algo/Searching Algo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Stack and Queue/Stack and Queue.iml" filepath="$PROJECT_DIR$/Java/Stack and Queue/Stack and Queue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/Strings/Strings.iml" filepath="$PROJECT_DIR$/Java/Strings/Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java/TreeQuestions/TreeQuestions.iml" filepath="$PROJECT_DIR$/Java/TreeQuestions/TreeQuestions.iml" />
+    </modules>
+  </component>
+</project>

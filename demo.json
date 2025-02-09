@@ -1,0 +1,10 @@
+{
+  "address":{"roadNo":10,"area":"GachiBowli","landmark":"Mukesh PG"},
+  "contact":[
+    {"type":"home","contact":"8877322331"},
+    {"type":"work","contact":"5533244891"}
+  ],
+  "ID":1,
+  "task3":"Lunch",
+  "task4":"Have some Chai"
+}

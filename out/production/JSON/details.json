@@ -1,0 +1,19 @@
+{
+    "name" :{
+        "firstName" : "Hamid",
+        "middleName" : "Razza",
+        "lastName" : "Ansari"
+    },
+    "contact" : {
+        "home" : "5533221177",
+        "work" : "6677221133"
+    },
+    "address" : {
+        "street" : 20,
+        "landmark" : "Near the temple",
+        "building" : "Nice Residency",
+        "country" : "India"
+    },
+    "age" : 21,
+    "relationship" : "single"
+}
