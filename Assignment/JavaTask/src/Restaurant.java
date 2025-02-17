@@ -12,7 +12,7 @@ public class Restaurant{
         boolean repeat = true;
         double bill = 0;
         LocalDateTime now = LocalDateTime.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd:MM:yyy HH:mm");
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd:MM:yyyy HH:mm");
         String formattedDateTime = now.format(formatter);
 
 

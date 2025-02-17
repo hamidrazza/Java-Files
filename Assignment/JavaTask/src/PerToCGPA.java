@@ -11,23 +11,18 @@ class PerToCGPA{
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd:MM:yyyy HH:mm");
 		String dateTime = now.format(format);
 
-		// flag: To track if input is right or wrong.
-		boolean flag = true;
 		System.out.println("Date : " + dateTime);
 		// Checking if the percentage is exceeding 100 or not.
-		while(flag){
-			System.out.print("Enter the percentage value: ");
-			double per = sc.nextDouble();
-			if(per <= 100 && per >= 0){
-				flag = false;
-				// Calculating the CGPA
-				double cgpa = per/9.5;
-				System.out.printf("Percentage %.2f to CGPA is %.2f", per, cgpa);
-			}
-			else{
-				System.out.println("Percentage can't be greater than 100 OR less than 0");
-			}
+		System.out.print("How many subjects do you have : ");
+		int subject = sc.nextInt();
+		double marks = 0;
+		for (int i = 1; i <= subject; i++) {
+			System.out.print("Enter your subject " + i + " marks : ");
+			double number = sc.nextDouble();
+			marks += number;
 		}
-		
+		double percentage =  marks / subject;
+		double cgpa = percentage/9.5;
+		System.out.println("Your current percentage is " + String.format("%.2f",percentage) + " and CGPA is " + String.format("%.2f",cgpa));
 	}
 }
