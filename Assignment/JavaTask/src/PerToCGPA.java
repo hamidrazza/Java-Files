@@ -8,20 +8,20 @@ class PerToCGPA{
 		Scanner sc = new Scanner(System.in);
 
 		LocalDateTime now = LocalDateTime.now();
-		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd:MM:yyyy HH:mm");
-		String dateTime = now.format(format);
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd:MM:yyyy HH:mm");
+		String dateTime = now.format(formatter);
 
 		System.out.println("Date : " + dateTime);
 		// Checking if the percentage is exceeding 100 or not.
 		System.out.print("How many subjects do you have : ");
-		int subject = sc.nextInt();
+		int subjects = sc.nextInt();
 		double marks = 0;
-		for (int i = 1; i <= subject; i++) {
+		for (int i = 1; i <= subjects; i++) {
 			System.out.print("Enter your subject " + i + " marks : ");
 			double number = sc.nextDouble();
 			marks += number;
 		}
-		double percentage =  marks / subject;
+		double percentage =  marks / subjects;
 		double cgpa = percentage/9.5;
 		System.out.println("Your current percentage is " + String.format("%.2f",percentage) + " and CGPA is " + String.format("%.2f",cgpa));
 	}

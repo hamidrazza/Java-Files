@@ -16,11 +16,10 @@ public class Electricity {
         System.out.println("     ELECTRICITY BILL ");
         System.out.println("     Date: " + timeDate);
         System.out.println("-------------------------");
-        int input;
         System.out.println("1. Domestic Electric Bill");
         System.out.println("2. Commercial Electric Bill");
         System.out.print("Enter your choice : ");
-        input = sc.nextInt();
+        int input = sc.nextInt();
 
         switch(input){
             case 1 -> {
@@ -36,29 +35,29 @@ public class Electricity {
         }
     }
 
-    static double domesticBill(double kiloWatt){
-        if(kiloWatt < 100 && kiloWatt >= 0){
-            return bill += (kiloWatt * 3.10);
+    static double domesticBill(double usage){
+        if(usage < 100 && usage >= 0){
+            return bill += (usage * 3.10);
         }
-        else if(kiloWatt >= 100 && kiloWatt <= 200){
-            return bill += (kiloWatt * 4.60);
+        else if(usage >= 100 && usage <= 200){
+            return bill += (usage * 4.60);
         }
-        else if(kiloWatt < 0) {
+        else if(usage < 0) {
             System.out.println("Consumption can't be in negative.");
         }
-        return bill += (kiloWatt * 5.50);
+        return bill += (usage * 5.50);
     }
-    static double commercialBill(double kiloWatt){
-        if(kiloWatt < 100 && kiloWatt >= 0){
-            return bill += (kiloWatt * 8.50);
+    static double commercialBill(double usage){
+        if(usage < 100 && usage >= 0){
+            return bill += (usage * 8.50);
         }
-        else if(kiloWatt >= 100 && kiloWatt <= 200){
-            return bill += (kiloWatt * 9.90);
+        else if(usage >= 100 && usage <= 200){
+            return bill += (usage * 9.90);
         }
-        else if(kiloWatt < 0) {
+        else if(usage < 0) {
             System.out.println("Consumption can't be in negative.");
         }
-        return bill += (kiloWatt * 10.40);
+        return bill += (usage * 10.40);
 
     }
 }

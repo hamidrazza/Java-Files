@@ -39,7 +39,7 @@ public class Restaurant{
             switch (choice) {
                 case 1 -> {
                     System.out.print("Tea quantity: ");
-                    tQty += sc.nextInt();
+                    tQty = sc.nextInt();
                     bill += tQty * 15;
                 }
                 case 2 -> {
