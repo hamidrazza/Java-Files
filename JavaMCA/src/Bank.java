@@ -26,21 +26,16 @@ public class Bank {
             switch (choice) {
                 case 0 -> {
                     repeat = false;
-                    break;
                 }
                 case 1 -> {
                     checkVal();
-                    break;
                 }
                 case 2 -> {
                     withdraw();
-                    break;
                 }
                 case 3 -> {
                     deposit();
-                    break;
                 }
-
                 default -> System.out.println("INVALID OPTION !!");
             }
         }
