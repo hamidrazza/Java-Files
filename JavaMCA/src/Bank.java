@@ -24,18 +24,10 @@ public class Bank {
             int choice = in.nextInt();
 
             switch (choice) {
-                case 0 -> {
-                    repeat = false;
-                }
-                case 1 -> {
-                    checkVal();
-                }
-                case 2 -> {
-                    withdraw();
-                }
-                case 3 -> {
-                    deposit();
-                }
+                case 0 -> repeat = false;
+                case 1 -> checkVal();
+                case 2 -> withdraw();
+                case 3 -> deposit();
                 default -> System.out.println("INVALID OPTION !!");
             }
         }
@@ -58,12 +50,12 @@ public class Bank {
             System.out.println("To withdraw 50000 or more than 50000");
             System.out.print("You need to enter PAN NO : ");
             String panNo = sc.next();
-            if(panNo.length() == 10){
+            if(panNo.length() == 10) {
                 System.out.println("PAN NO VERIFIED !!");
+                System.out.println("WITHDRAW SUCCESSFUL !!!");
+                balance -= amount;
+                System.out.println("Your current balance is : " + (balance - amount));
             }
-            System.out.println("WITHDRAW SUCCESSFUL !!!");
-            balance -= amount;
-            System.out.println("Your current balance is : " + (balance-amount));
         }
         else{
             System.out.println("WITHDRAW SUCCESSFUL !!!");
@@ -76,16 +68,18 @@ public class Bank {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter the amount : ");
         double amount = sc.nextDouble();
+
         if(amount > 50000){
             System.out.println("To Deposit 50000 or more than 50000");
             System.out.print("You need to enter PAN NO : ");
             String panNo = sc.next();
-            if(panNo.length() == 10){
+            if(panNo.length() == 10) {
                 System.out.println("PAN NO VERIFIED !!");
+
+                System.out.println("DEPOSIT SUCCESSFUL !!!");
+                balance += amount;
+                System.out.println("Your current balance is : " + (balance));
             }
-            System.out.println("DEPOSIT SUCCESSFUL !!!");
-            balance += amount;
-            System.out.println("Your current balance is : " + (balance));
         }
         else{
             System.out.println("DEPOSIT SUCCESSFUL !!!");
