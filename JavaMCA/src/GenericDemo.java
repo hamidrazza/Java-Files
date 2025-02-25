@@ -27,11 +27,11 @@ class GenericDemo{
 	// Main method
 	public static void main(String[] args){
 		System.out.println("Single Type Generic Class");
-		GenericOne<Integer> first = new GenericOne<Integer>(22);
+		GenericOne<Integer> first = new GenericOne<>(22);
 		System.out.println("Object is : " + first.getObj());
 		
 		System.out.println("Double Type Generic Class");
-		GenericTwo<Integer,String> second = new GenericTwo<Integer,String>(12, "Hamid");
+		GenericTwo<Integer,String> second = new GenericTwo<>(12, "Hamid");
 		System.out.println("Object1 is : " + second.getObj1());
 		System.out.println("Object2 is : " + second.getObj2());
 	}
