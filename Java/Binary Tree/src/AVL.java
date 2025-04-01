@@ -138,10 +138,10 @@ public class AVL {
     private void display(Node node, String details) {
         if (node == null) return;
 
-        System.out.println(details + node.value);
+        System.out.println(details + (char)node.value);
 
-        display(node.left, "Left child of " + node.value + " : ");
-        display(node.right, "Right child of " + node.value + " : ");
+        display(node.left, "Left child of " + (char)node.value + " : ");
+        display(node.right, "Right child of " + (char)node.value + " : ");
     }
 
     public boolean balanced() {
@@ -192,12 +192,17 @@ public class AVL {
         System.out.println(node.value + " ");
     }
 
-
     public static void main(String[] args) {
         AVL tree = new AVL();
-        for (int i = 0; i < 1000; i++) {
-            tree.insert(i);
+        char[] arr = {'H','I','J','B','A','E','C','F','D','G','K','L'};
+
+        for (int i = 0; i < arr.length; i++) {
+            tree.insert(arr[i]);
+            System.out.println("Step: " + (i+1) + " Inserting " + arr[i]);
+            tree.display();
+            System.out.println();
         }
-        System.out.println(tree.height());
+        tree.display();
+        System.out.println(tree.height() +"\n" +  tree.balanced());
     }
 }
